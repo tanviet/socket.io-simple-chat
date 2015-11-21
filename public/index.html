@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>A simple chat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <ul class="pages">
+    <li class="chat page">
+      <div class="chatArea">
+        <ul class="messages"></ul>
+        <ul class="onlineUsers"></ul>
+      </div>
+      <input class="inputMessage" placeholder="Type here..."/>
+    </li>
+    <li class="login page">
+      <div class="form">
+        <h3 class="title">What's your username?</h3>
+        <input class="usernameInput" type="text" maxlength="14" />
+      </div>
+    </li>
+  </ul>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+  <script type="text/javascript" src="/main.js"></script>
+</body>
+</html>
