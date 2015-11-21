@@ -6,10 +6,11 @@ A simple chat demo for socket.io
 
 - Clone the project
 - Access the project and run following commands
-  ```
+
+```
   $ npm install
   $ node index.js
-  ```
+```
 
 And point your browser to `http://localhost:3000`. Optionally, specify a port by supplying the `PORT` env variable.
 
