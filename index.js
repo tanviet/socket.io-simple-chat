@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var server = require('http').createServer(app);
 var io = require('socket.io')(server);
+var validator = require('validator');
 var port = process.env.PORT || 3000;
 
 server.listen(port, function() {
@@ -23,6 +24,9 @@ io.on('connection', function(socket) {
 
   // Receive messages from client
   socket.on('new message', function(msg) {
+
+    // Escape received messages before broadcasting them to clients
+    msg = validator.escape(msg);
 
     // Emit messages to everyone except the sender
     socket.broadcast.emit('new message', {
